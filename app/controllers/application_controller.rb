@@ -7,3 +7,5 @@ private
     devise_parameter_sanitizer.permit(:sign_up, keys: [:username])
   end
 end
+def
+  
