@@ -31,7 +31,6 @@ class RecipesController < ApplicationController
       redirect_to recipe_path(@recipe), notice: "更新に成功しました。"
     else
       render :edit
-
     end
 
   end
