@@ -12,12 +12,12 @@ NULLCMD = :
 #### Start of system configuration section. ####
 
 srcdir = .
-topdir = /Users/user/.rbenv/versions/2.6.6/include/ruby-2.6.0
+topdir = /Users/user/.anyenv/envs/rbenv/versions/2.6.6/include/ruby-2.6.0
 hdrdir = $(topdir)
-arch_hdrdir = /Users/user/.rbenv/versions/2.6.6/include/ruby-2.6.0/x86_64-darwin19
+arch_hdrdir = /Users/user/.anyenv/envs/rbenv/versions/2.6.6/include/ruby-2.6.0/x86_64-darwin19
 PATH_SEPARATOR = :
 VPATH = $(srcdir):$(arch_hdrdir)/ruby:$(hdrdir)/ruby
-prefix = $(DESTDIR)/Users/user/.rbenv/versions/2.6.6
+prefix = $(DESTDIR)/Users/user/.anyenv/envs/rbenv/versions/2.6.6
 rubysitearchprefix = $(rubylibprefix)/$(sitearch)
 rubyarchprefix = $(rubylibprefix)/$(arch)
 rubylibprefix = $(libdir)/$(RUBY_BASE_NAME)
@@ -31,8 +31,8 @@ rubyhdrdir = $(includedir)/$(RUBY_VERSION_NAME)
 vendorarchdir = $(vendorlibdir)/$(sitearch)
 vendorlibdir = $(vendordir)/$(ruby_version)
 vendordir = $(rubylibprefix)/vendor_ruby
-sitearchdir = $(DESTDIR)./.gem.20200808-77126-1sa84sc
-sitelibdir = $(DESTDIR)./.gem.20200808-77126-1sa84sc
+sitearchdir = $(DESTDIR)./.gem.20201003-43089-19qgjza
+sitelibdir = $(DESTDIR)./.gem.20201003-43089-19qgjza
 sitedir = $(rubylibprefix)/site_ruby
 rubyarchdir = $(rubylibdir)/$(arch)
 rubylibdir = $(rubylibprefix)/$(ruby_version)
@@ -87,10 +87,10 @@ CCDLFLAGS = -fno-common
 CFLAGS   = $(CCDLFLAGS) $(cflags)  -fno-common -pipe $(ARCH_FLAG)
 INCFLAGS = -I. -I$(arch_hdrdir) -I$(hdrdir)/ruby/backward -I$(hdrdir) -I$(srcdir)
 DEFS     = 
-CPPFLAGS = -DRUBY_EXTCONF_H=\"$(RUBY_EXTCONF_H)\" -I/usr/local/include -I/Users/user/.rbenv/versions/2.6.6/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT $(DEFS) $(cppflags)
+CPPFLAGS = -DRUBY_EXTCONF_H=\"$(RUBY_EXTCONF_H)\" -I/usr/local/include -I/Users/user/.anyenv/envs/rbenv/versions/2.6.6/include  -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT $(DEFS) $(cppflags)
 CXXFLAGS = $(CCDLFLAGS) $(cxxflags) $(ARCH_FLAG)
-ldflags  = -L. -L/Users/user/.rbenv/versions/2.6.6/lib  -fstack-protector-strong -L/usr/local/lib -Wl,-rpath,/usr/local/lib
-dldflags = -L/Users/user/.rbenv/versions/2.6.6/lib  -Wl,-undefined,dynamic_lookup -Wl,-multiply_defined,suppress 
+ldflags  = -L. -L/Users/user/.anyenv/envs/rbenv/versions/2.6.6/lib  -fstack-protector-strong -L/usr/local/lib -Wl,-rpath,/usr/local/lib
+dldflags = -L/Users/user/.anyenv/envs/rbenv/versions/2.6.6/lib  -Wl,-undefined,dynamic_lookup -Wl,-multiply_defined,suppress 
 ARCH_FLAG = 
 DLDFLAGS = $(ldflags) $(dldflags) $(ARCH_FLAG)
 LDSHARED = $(CC) -dynamic -bundle

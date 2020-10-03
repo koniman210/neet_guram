@@ -6,4 +6,7 @@ Rails.application.routes.draw do
   resources :recipes do
     resource :likes, only: [:create,:destroy] 
   end
+  resources :recipes do
+    resources :reviews, only: [:index,:create]
+  end
 end
